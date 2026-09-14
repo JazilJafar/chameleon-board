@@ -1,0 +1,89 @@
+.aclonica-regular {
+  font-family: "Aclonica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.abel-regular {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(203, 203, 188);
+}
+ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+.header h5 {
+    font-size: 20px;
+    font-family: "Aclonica";
+}
+nav ul li a {
+    font-family: "Abel";
+}
+#about {
+    height: 100vh;
+}
+#contact{
+    height: 100vh;
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 36px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+#about h1 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #2a9d8f, #e76f51);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#about p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 16px;
+}
+.abhi {
+    list-style: none;
+    padding: 0;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.abhi li {
+    padding: 16px 20px;
+    background-color: #f8fafc;
+    border-radius: 6px;
+    color: #334155;
+    line-height: 1.5;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.abhi li:hover {
+    transform: translateX(6px);
+    background-color: #f1f5f9;
+}
+.abhi li strong {
+    color: #0f172a;
+    margin-right: 6px;
+}

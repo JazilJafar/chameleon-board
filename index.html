@@ -3,56 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chameleon-board</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta name="description" content="Chameleon Board is an adaptive Kanban workspace for study, projects and ideas">
+    <title>Chameleon Board</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <section class="header">
-        <h5>
-            Chameleon-Board
-        </h5>
-        <nav>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="https://github.com/JazilJafar/chameleon-board">Github</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-    </section>
-    <div id="about">
-        <h1>Chameleon-Board</h1>
-        <p>Adaptive Kanban boards designed to fit any workflow.</p>
-        <p>Just like its name, Chameleon-Board shifts layout,theme and features to match your hobbies.</p>
+    <header class="site-header">
+        <div class="container nav" id="nav">
+            <a class="brand" href="#top" aria-label="Chameleon Board home">CHAMELEON</a>
 
-        <ul class="abhi">
-            <li><strong>Adaptive Layouts:</strong>You can easily switch to other designs if wanted</li>
-            <li><strong>Custom themes:</strong>Match your hobbies with themes</li>
-            <li><strong>Scalable Workflows:</strong>This can store every data and also it is in your local storage for safety</li>
-        </ul>
-    </div>
-    <div class="contact-section" id="contact">
-        <h2>Get in Touch</h2>
-        <p>Have questions?Connect with us below.</p>
-        <div class="contact-links">
-            <a href="mailto:jazilhani@gmail.com" class="conatct-card">
-                <span class="icon">✉️</span>
-                <div class="text">
-                    <strong>E-mail Us</strong>
-                    <small>jazilhani@gmail.com</small>
-                </div>
-            </a>
-            <a href="https://github.com/JazilJafar/chameleon-board" target="_blank" class="contact-card">
-                <span class="icon">💻</span>
-                <div class="text">
-                    <strong>Github</strong>
-                    <small>Contribute to this small Project</small>
-                </div>
-            </a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#features">Features</a>
+                <a href="#themes">Themes</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="https://github.com/JazilJafar/chameleon-board" target="_blank" rel="noreferrer">GitHub</a>
+            </nav>
+
+            <a class="button button-primary desktop-cta" href="#try">Take a look <span aria-hidden="true">></span></a>
+
+            <button class="menu-button" id="menuButton" aria-label="Open Menu" aria-expanded="false">☰</button>
         </div>
-    </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow">Harvest Theme . Chameleon Board</p>
+
+                    <h1>
+                        Keep the work moving
+                        <span>one card at a time</span>
+                        with chameleon board!
+                    </h1>
+
+                    <p class="hero-copy">
+                        A simple place to collect your tasks, sort out what matters, 
+                        and see what's already done and where you stand.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#try">Take a look <span aria-hidden="true">></span></a>
+                        <a class="button button-secondary" href="https://github.com/JazilJafar/chameleon-board" target="_blank" rel="noreferrer">See the project</a>
+                    </div>
+
+                    <p class="hero-note">Made for small plans, unfinished ideas, and the work in between.</p>
+                </div>
+
+                <div class="board-preview" aria-label="Preview of the Harvest Kanban board">
+                    <div class="window-bar"><span></span><span></span><span></span></div>
+
+                    <div class="board-shell">
+                        <div class="board-topbar">
+                            <div>
+                                <p class="small-label">Current board</p>
+                                <h3>Things to finish</h3>
+                            </div>
+                            <span class="theme-pill">Harvest Theme</span>
+                        </div>
+
+                        <div class="kanban-preview">
+                            <section class="kanban-column">
+                                <div class="column-title"><span>To do</span><span>02</span></div>
+
+                                <article class="task-card">
+                                    <span class="task-tag">Today</span>
+                                    <h4>Finish the first draft</h4>
+                                    <div class="card-meta"><span>2 small steps left</span><span>...</span></div>
+                                </article>
+
+                                <article class="task-card"
+                                    <span class="task-tag">Later</span>
+                                    <h4>Clean up the project notes</h4>
+                                </article>
+                            </section>
+
+                            <section class="kanban-column">
+                                <div class="column-title"><span>Working on</span><span>01</span></div>
+
+                                <article class="task-card accent-teal">
+                                    <span class="task-tag">Working on</span>
+                                    <h4>Put the landing page together</h4>
+                                </article>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

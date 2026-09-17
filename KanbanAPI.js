@@ -94,4 +94,4 @@ function read(){
 };
 function save(data){
     localStorage.setItem("kanban-data", JSON.stringify(data));
-};l
+};

@@ -1,3 +1,5 @@
+import KanbanAPI from "./KanbanAPI.js";
+
 export default class Column {
     constructor(id, title){
       this.elements = {};
@@ -6,7 +8,16 @@ export default class Column {
       this.elements.items = this.elements.root.querySelector(".kanban__column-items");
       this.elements.addItem = this.elements.root.querySelector(".kanban__add-item");
       
-      this.elements.root.
+      this.elements.root.dataset.id = id;
+      this.elements.title.textContent = title;
+
+      this.elements.addItem.addEventListener("click", () => {
+         
+      });
+
+      KanbanAPI.getItems(id).forEach(item => {
+        this.renderItem(item);
+      });
     }
     static createRoot(){
         const range = document.createRange();
@@ -21,4 +32,7 @@ export default class Column {
         </div>
         `).children[0];
     };
+    renderItem(data){
+     
+    }
 };

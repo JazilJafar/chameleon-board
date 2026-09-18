@@ -1,89 +1,237 @@
-.aclonica-regular {
-  font-family: "Aclonica", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.abel-regular {
-  font-family: "Abel", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+:root {
+    --bg: #f3ead7;
+    --bg-soft: #e8d7b8;
+    --panel: rgba(255, 255, 255, 0.78);
+    --panel-solid: #fff;
+    --text: #34261d;
+    --muted: #776653;
+    --line: rgba(77, 52, 32, 0.16);
+
+    --teal: #617c54;
+    --purple: #9b6048;
+    --coral: #c46f3e;
+    --lime: #c7a653;
+
+    --shadow: 0 24px 70px rgba(91, 61, 32, 0.15);
+    --radius: 22px;
 }
 
-*{
-    padding: 0;
+* {
     box-sizing: border-box;
     margin: 0;
-}
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: rgb(203, 203, 188);
-}
-ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-a {
-    text-decoration: none;
-    color: #333;
-}
-.header h5 {
-    font-size: 20px;
-    font-family: "Aclonica";
-}
-nav ul li a {
-    font-family: "Abel";
-}
-#about {
-    height: 100vh;
-}
-#contact{
-    height: 100vh;
-    max-width: 750px;
-    margin: 40px auto;
-    padding: 36px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-#about h1 {
-    font-size: 2.2rem;
-    margin-bottom: 12px;
-    background: linear-gradient(135deg, #2a9d8f, #e76f51);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-#about p {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: #4a5568;
-    margin-bottom: 16px;
-}
-.abhi {
-    list-style: none;
     padding: 0;
-    margin-top: 24px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    color: var(--text);
+    background: radial-gradient(ellipse at 12% 0%, rgba(196, 111, 62, 0.22), transparent 34rem),
+                radial-gradient(ellipse at 92% 18%, rgba(97, 124, 84, 0.18), transparent 30rem),
+                linear-gradient(135deg, #f3ead7 0%, #eee0c5 52%, #e5d0ae 100%);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
+}
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid rgba(77, 52, 32, 0.08);
+    background: rgba(243, 234, 215, 0.72);
+    backdrop-filter: blur(18px);
+    transition: background 0.25s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(243, 234, 215, 0.94);
+}
+
+.nav {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    height: 76px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text);
+    font: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    color: var(--muted);
+    font-size: 0.94rem;
+}
+
+.nav-links a {
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text);
+}
+
+.nav-links a::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    border-radius: 4px;
+    background: var(--coral);
+    content: "";
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.menu-button {
+    display: none;
+    padding: 8px;
+    background: transparent;
+    color: var(--text);
+    font-size: 1.35rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: 12px 19px;
+    font-weight: 700;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    color: #fffaf0;
+    background: #9b6048;
+    box-shadow: 0 8px 20px rgba(155, 96, 72, 0.2);
+}
+
+.button-primary:hover {
+    background: #814b37;
+}
+
+.button-secondary {
+    border-color: rgba(77,52, 32, 0.2);
+    color: var(--text);
+    background: rgba(255, 250, 240, 0.45);
+}
+
+.button-secondary:hover {
+    border-color: rgba(77, 52, 32, 0.4);
+    background: rgba(255, 250, 240, 0.85);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Space Grotesk", sans-serif;
+    line-height: 1.08;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    color: #617c54;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.eyebrow::before {
+    width: 24px;
+    height: 2px;
+    border-radius: 4px;
+    background: currentColor;
+    content: "";
+}
+
+.hero {
+    position: relative;
+    padding: 92px 0 120px;
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 64px;
+}
+
+.hero-content h1 {
+    max-width: 650px;
+    font-size: clamp(3.2rem, 7vw, 5.7rem);
+    letter-spacing: -0.07em;
+}
+
+.hero-content h1 span {
+    color: #9b6048;
+}
+
+.hero-copy {
+    max-width: 530px;
+    margin: 25px 0 31px;
+    color: var(--muted);
+    font-size: 1.12rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
     gap: 12px;
 }
-.abhi li {
-    padding: 16px 20px;
-    background-color: #f8fafc;
-    border-radius: 6px;
-    color: #334155;
-    line-height: 1.5;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-.abhi li:hover {
-    transform: translateX(6px);
-    background-color: #f1f5f9;
-}
-.abhi li strong {
-    color: #0f172a;
-    margin-right: 6px;
+
+.hero-note {
+    margin-top: 18px;
+    color: #927e65;
+    font-size: 0.84rem;
 }

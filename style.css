@@ -235,3 +235,234 @@ h4 {
     color: #927e65;
     font-size: 0.84rem;
 }
+
+.board-preview {
+    position: relative;
+    border: 1px solid rgba(77, 52, 32, 0.16);
+    border-radius: 28px;
+    padding: 17px;
+    background: rgba(255, 250, 240, 0.5);
+    box-shadow: var(--shadow);
+    transform: rotate(0.8deg);
+}
+
+.board-preview::before {
+    position: absolute;
+    z-index: -1;
+    inset: 12% -10% -12% 10%;
+    border-radius: 50%;
+    background: rgba(196, 111, 62, 0.2);
+    filter: blur(70px);
+    content: "";
+}
+
+.window-bar {
+    display: flex;
+    gap: 7px;
+    padding: 5px 5px 16px;
+}
+
+.window-bar span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #c46f3e;
+}
+
+.window-bar span:nth-child(2) {
+    background: #c7a653;
+}
+
+.window-bar span:nth-child(3) {
+    background: #617c54;
+}
+
+.board-shell {
+    border: 1px solid rgba(77, 52, 32, 0.12);
+    border-radius: 18px;
+    padding: 18px;
+    background: rgba(255, 250, 240, 0.82);
+}
+
+.board-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 21px;
+}
+
+.small-label {
+    color: #927e65;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.board-topbar h3 {
+    margin-top: 4px;
+    color: var(--text);
+    font-size: 1.25rem;
+}
+
+.theme-pill {
+    border: 1px solid rgba(77, 52, 32, 0.3);
+    border-radius: 999px;
+    padding: 7px 10px;
+    color: #536c48;
+    background: rgba(97, 124, 84, 0.1);
+    font-size: 0.72rem;
+    white-space: nowrap;
+}
+
+.kanban-preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.kanban-column {
+    min-height: 230px;
+    border: 1px solid rgba(77, 52, 32, 0.1);
+    border-radius: 13px;
+    padding: 10px;
+    background: rgba(232, 215, 184, 0.32);
+}
+
+.column-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #5b4938;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.column-title span:last-child,
+.card-meta {
+    color: #927e65;
+}
+
+.task-card {
+    margin-bottom: 9px;
+    border: 1px solid rgba(77, 52, 32, 0.1);
+    border-radius: 11px;
+    padding: 11px;
+    background: #fffaf0;
+    box-shadow: 0 5px 15ox rgba(91, 61, 32, 0.06);
+}
+
+.task-card h4 {
+    margin: 7px 0 13px;
+    color: var(--text);
+    font-size: 0.77rem;
+}
+
+.task-tag {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 3px 6px;
+    color: #9b6048;
+    background: rgba(155, 96, 72, 0.13);
+    font-size: 0.6rem;
+    font-weight: 700;
+}
+
+.accent-teal .task-tag {
+    color: #92732f;
+    background: rgba(199, 166, 83, 0.16);
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.63rem;
+}
+
+.section {
+    padding: 104px 0;
+}
+
+.section-heading {
+    max-width: 610px;
+    margin-bottom: 42px;
+}
+
+.section-heading h2 {
+    font-size: clamp(2.1rem, 4vw, 3.35rem);
+    letter-spacing: -0.05em;
+}
+
+.section-heading p:last-child {
+    margin-top: 15px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.features,
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.feature-card,
+.step-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 25px;
+    background: var(--panel);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.feature-card:hover,
+.step-card:hover {
+    border-color: rgba(155, 96, 72, 0.45);
+    transform: translateY(-6px);
+}
+
+.feature-icon,
+.step-card > span {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    margin-bottom: 22px;
+    border-radius: 13px;
+    color: #617c54;
+    background: rgba(97, 124, 84, 0.13);
+    font-weight: 700;
+}
+
+.feature-card:nth-child(2) .feature-icon {
+    color: #9b6048;
+    background: rgba(155, 96, 72, 0.13);
+}
+
+.feature-card:nth-child(3) .feature-icon {
+    color: #c46f3e;
+    background: rgba(196, 111, 62, 0.13);
+}
+
+.feature-card:nth-child(4) .feature-icon {
+    color: #92732f;
+    background: rgba(199. 166, 83, 0.16);
+}
+
+.feature-card h3,
+.step-card h3 {
+    margin-bottom: 9px;
+    font-size: 1.12rem;
+}
+
+.feature-card p,
+.step-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.themes-section {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: rgba(255, 250, 240, 0.25);
+}

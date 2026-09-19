@@ -1,7 +1,9 @@
 import KanbanAPI from "./KanbanAPI.js";
+import dropzone from "./dropzone.js";
 import Item from "./item.js";
 export default class Column {
     constructor(id, title){
+      const topdropzone = dropzone.createdropzone()
       this.elements = {};
       this.elements.root = Column.createRoot();
       this.elements.title = this.elements.root.querySelector(".kanban__column-title");

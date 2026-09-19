@@ -11,7 +11,13 @@ export default class dropzone {
            });
 
            dropzone.addEventListener("dragleave", () => {
-             dropzone.classList.remove("kanban__dropzone--active")
+             dropzone.classList.remove("kanban__dropzone--active");
+           });
+           dropzone.addEventListener("drop", e => {
+            e.preventDefault();
+            dropzone.classList.remove("kanban__dropzone--active");
+            const columnElement = dropzone.closest(".kanban__column");
+            const columnId = Number(columnElement.dataset.id)
            });
         return dropzone;
     };

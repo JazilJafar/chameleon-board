@@ -1,0 +1,79 @@
+.aboreto-regular {
+  font-family: "Aboreto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+    background-image: linear-gradient(to right, #526396,#5753C9,#6E7FF3);
+}
+.kanban {
+    display: flex;
+    padding: 30px;
+    width: 750px;
+    border-radius: 10px;
+    background-blend-mode: difference;
+    margin-left: 25%;
+}
+.kanban * {
+    font-family: sans-serif;
+}
+.kanban__column{
+    flex: 1;
+}
+.kanban__column:not(:last-child){
+    margin-right: 30px;
+}
+.kanban__column-title{
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: white;
+    user-select: none;
+
+}
+h1 {
+    font-family: "Aboreto";
+    text-align: center;
+}
+.kanban__item-input{
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.kanban__dropzone{
+    height: 10px;
+    transition: background 0.15s, height 0.15s;
+}
+.kanban__dropzone--active {
+    background: rgb(144, 160, 215);
+    height: 21px;
+}
+.kanban__add-item {
+    padding: 10px 0;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    background-image: linear-gradient(125deg, rgb(119, 178, 189),white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.snowflake {
+  position: fixed;
+  top: -10vh;
+  color: #fff;
+  user-select: none;
+  z-index: 9999;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}

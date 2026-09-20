@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chameleon Board is a simple, adaptable workspace for projects, study and ideas">
+    <title>Chameleon Board</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container-nav" id="nav">
+            <a class="brand" href="#top" aria-label="Chameleon board home">Chameleon</a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#features">Features</a>
+                <a href="#themes">Themes</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="https://github.com/JazilJafar/chameleon-board" target="_blank" rel="noreferrer">GitHub</a>
+            </nav>
+
+            <a class="button button-primary desktop-cta" href="board.html">Open Board</a>
+            <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>
+                        Plan like a chameleon, adapt to your work
+                    </h1>
+
+                    <p class="hero-copy">
+                        Chameleon Board gives you a simple, adaptable workspace
+                        to plan your projects, academics and ideas. Organize your tasks,
+                        track your progress and stay updated with your work
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="board.html">Open Board</a>
+                        <a class="button button-secondary" href="#features">See how it works</a>
+                    </div>
+
+                    <p class="hero-note">A small board for the things you want to plan through</p>
+                </div>
+
+                <div class="preview-wrap reveal">
+                    <div class="preview-heading">
+                        <span>Preview</span>
+                        <span>Drag and drop your tasks, organise in flow</span>
+                    </div>
+
+                    <div class="board-preview" aria-label="Preview of the Chameleon Kanban Board">
+                        <div class="window-bar"><span></span><span></span><span></span></div>
+
+                        <div class="board-shell">
+                            <div class="board-topbar">
+                                <div>
+                                    <p class="small-label">Current board</p>
+                                    <h3>Things to finish</h3>
+                                </div>
+                                <span class="theme-pill">Harvest</span>
+                            </div>
+
+                            <div class="kanban-preview">
+                                <section class="kanban-column">
+                                    <div class="column-title"><span>To do</span><span>02</span></div>
+                                    <article class="task-card preview-card"><span class="task-tag">Today</span><h4>Finish the first draft</h4><div class="card-meta"><span>2 small steps left...</span></div></article>
+                                    <article class="task-card preview-card"><span class="task-tag">Later</span><h4>Clean up project notes</h4></article>
+                                </section>
+
+                                <section class="kanban-column">
+                                    <div class="column-title"><span>Working on..</span><span>01</span></div>
+                                    <article class="task-card preview-card accent-teal"><span class="task-tag">Working on</span><h4>Put the landing page together</h4></article>
+                                </section>
+
+                                <section class="kanban-column">
+                                    <div class="column-title"><span>Done</span><span>01</span></div>
+                                    <article class="task-card preview-card accent-green"><span class="task-tag">Done</span><h4>Decide on the colour palette</h4></article>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="features">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <h2>Features</h2>
+                    <p>Chameleon Board is meant to feel simple and productive when you use it</p>
+                </div>
+
+                <div class="features">
+                    <article class="feature-card reveal reveal-delay-1"><span class="feature-number">01</span><h3>See what matters</h3><p>Keep the next useful thing visible in front of you without planning everything</p></article>
+                    <article class="feature-card reveal reveal-delay-2"><span class="feature-number">02</span><h3>Move with the work</h3><p>Shift tasks across the board as you complete them</p></article>
+                    <article class="feature-card reveal reveal-delay-3"><span class="feature-number">03</span><h3>Make it feel yours</h3><p>Use a theme and layout that makes it comfortable for you to return to</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section theme-section" id="themes">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <h2>One board, multiple moods</h2>
+                    <p>Harvest is the only available theme for now, but as the time goes, more themes will be added</p>
+                </div>
+
+                <div class="theme-grid">
+                    <article class="theme-card theme-harvest reveal reveal-delay-1"><div><div class="theme-swatch"></div><h3>Harvest</h3><p>Warm colours for steady work, focus and everyday plans</p></div><button type="button" data-theme-choice="harvest">Current theme</button></article>
+                    <article class="theme-card theme-cold reveal reveal-delay-2"><div><div class="theme-swatch"></div><h3>Cold</h3><p>A quiet, cool space for minimal distractions</p></div><button type="button" data-theme-choice="cold">Preview theme</button></article>
+                    <article class="theme-card theme-hot reveal reveal-delay-3"><div><div class="theme-swatch"></div><h3>Hot</h3><p>Brighter, more energetic mood for getting things moving</p></div><button type="button" data-theme-choice="hot">Preview theme</button></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="how-it-works">
+            <div class="section-heading reveal">
+                <h2>Start small, shape it as you go</h2>
+                <p>Create a board, put down what is on your mind and let the layout do the rest</p>
+            </div>
+
+            <div class="steps">
+                    <article class="step-card reveal reveal-delay-1"><span>01</span><h3>Create a space</h3><p>Make a board for a project, a subject, or anything you want to keep visible.</p></article>
+                    <article class="step-card reveal reveal-delay-2"><span>02</span><h3>Add your tasks</h3><p>Turn loose thoughts and unfinished plans into clear cards.</p></article>
+                    <article class="step-card reveal reveal-delay-3"><span>03</span><h3>Choose a mood</h3><p>Pick a theme that makes the workspace feel right for the moment.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" id="try">
+            <div class="container">
+                <div class="cta-box reveal">
+                    <p class="eyebrow">Ready when you are</p>
+                    <h2>Make a little room for the work.</h2>
+                    <p>Chameleon Board is being built as a simpler, more personal way to organise what comes next.</p>
+                    <a class="button button-primary" href="board.html">Open the board <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-row">
+            <p>© 2026 Chameleon Board. Built to adapt.</p>
+            <div class="footer-links"><a href="#top">Back to top</a><a href="mailto:jazilhani@gmail.com">Contact</a><a href="https://github.com/JazilJafar/chameleon-board" target="_blank" rel="noreferrer">GitHub</a></div>
+        </div>
+    </footer>
+
+    <script src="./js/harvest-art.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

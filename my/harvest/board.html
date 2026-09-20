@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chameleon Board</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/board.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a class="brand" href="index.html">CHAMELEON</a>
+            <a class="button button-secondary" href="index.html">Back to home</a>
+        </div>
+    </header>
+
+    <main class="board-page">
+        <div class="board-art" aria-hidden="true">
+            <img
+                class="plant plant-wheat"
+                src="./assets/harvest-wheat.svg"
+                alt=""
+            >
+
+            <img
+                class="plant plant-leaf"
+                src="./assets/harvest-leaf.svg"
+                alt=""
+            >
+
+            <img
+                class="plant plant-tree"
+                src="./assets/harvest-tree.svg"
+                alt=""
+            >
+        </div>
+
+        <div class="container">
+            <div class="board-page-top">
+                <div>
+                    <p class="small-label">Current board</p>
+                    <h1>Things to finish</h1>
+                </div>
+
+                <form id="taskForm" class="task-form">
+                    <input
+                        type="text"
+                        id="taskTitle"
+                        placeholder="Add a task..."
+                        required
+                    >
+                    <button type="submit" class="button button-primary">Add</button>
+                </form>
+            </div>
+
+            <div class="board-columns">
+                <section class="board-column" data-column="todo">
+                    <div class="column-title"><span>To do</span><span class="count">0</span></div>
+                    <div class="card-list" id="list-todo"></div>
+                </section>
+
+                <section class="board-column" data-column="progress">
+                    <div class="column-title"><span>In progress</span><span class="count">0</span></div>
+                    <div class="card-list" id="list-progress"></div>
+                </section>
+
+                <section class="board-column" data-column="done">
+                    <div class="column-title"><span>Done</span><span class="count">0</span></div>
+                    <div class="card-list" id="list-done"></div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/board.js"></script>
+</body>
+</html>

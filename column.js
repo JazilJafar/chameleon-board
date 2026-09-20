@@ -3,7 +3,7 @@ import dropzone from "./dropzone.js";
 import Item from "./item.js";
 export default class Column {
     constructor(id, title){
-      const topdropzone = dropzone.createdropzone()
+      const topdropzone = dropzone.createdropzone();
       this.elements = {};
       this.elements.root = Column.createRoot();
       this.elements.title = this.elements.root.querySelector(".kanban__column-title");
@@ -12,7 +12,8 @@ export default class Column {
       this.elements.addItem = this.elements.root.querySelector(".kanban__add-item");
       
       this.elements.root.dataset.id = id;
-             this.elements.title.textContent = title;
+      this.elements.title.textContent = title;
+      this.elements.items.appendChild(topdropzone);
       this.elements.addItem.addEventListener("click", () => {
          const newItem = KanbanAPI.insertItem(id, "");
          this.renderItem(newItem);
@@ -21,7 +22,7 @@ export default class Column {
       KanbanAPI.getItems(id).forEach(item => {
         this.renderItem(item);
       });
-    }
+    };
 
     static createRoot(){
         const range = document.createRange();

@@ -17,7 +17,13 @@ export default class dropzone {
             e.preventDefault();
             dropzone.classList.remove("kanban__dropzone--active");
             const columnElement = dropzone.closest(".kanban__column");
-            const columnId = Number(columnElement.dataset.id)
+            const columnId = Number(columnElement.dataset.id);
+            const dropzoneincolumn = Array.from(columnElement.querySelectorAll(".kanban__dropzone"));
+            const dropindex = dropzoneincolumn.indexOf(dropzone);
+            const itemId = Number(e.dataTransfer.getData("text/plain"));
+            const droppeselm = document.querySelector(`[data-id="${itemId}"]`);
+
+            console.log(droppeselm);
            });
         return dropzone;
     };

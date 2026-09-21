@@ -60,3 +60,30 @@ h1 {
     line-height:1.15;
     margin-bottom: 20px;
 }
+h1 span {
+    background: var(--c-f);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+p.subtitle {
+    font-size: 1.2rem;
+    color: var(--textsub);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+.cta-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--glowcolor);
+    color: #ffffff;
+    padding: 16px 42px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px var(--glowcolor);
+    transition: all 0.3s ease;
+}
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(255, 59, 0, 0.6);
+}

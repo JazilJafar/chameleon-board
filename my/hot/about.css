@@ -27,10 +27,36 @@ header {
     align-items: center;
 }
 .logo {
-    font-zize: 1.8rem;
+    font-size: 1.8rem;
     font-weight: 800;
     background: var(--c-f);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.5px;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.badge {
+    background: rgba(255, 59, 0, 0.12);
+    border: 1px solid rgba(255, 59, 0, 0.3);
+    color: #ff6a00;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height:1.15;
+    margin-bottom: 20px;
 }

@@ -7,7 +7,7 @@
 :root {
     --bg-dark: #0d0c11;
     --card-bg: #181622;
-    --cf: linear-gradient(135deg, #ff3b00, #ff8800);
+    --c-f: linear-gradient(135deg, #ff3b00, #ff8800);
     --text-main: #f5f5f7;
     --textsub: #9e9ea7;
     --glowcolor: rgba(255, 59, 0, 0.4);
@@ -24,4 +24,13 @@ header {
     padding: 24px 8%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-zize: 1.8rem;
+    font-weight: 800;
+    background: var(--c-f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
 }

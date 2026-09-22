@@ -3,3 +3,25 @@
     padding: 0;
     margin: 0;
 }
+.kanban {
+    display: flex;
+    padding: 30px;
+    width: 750px;
+    background-color: orange;
+    border-radius: 5px;
+} 
+.kanban * {
+    font-family: sans-serif, Arial, Helvetica, system-ui, -apple-system, BlinkMacSystemFont;
+}
+.kanban__column {
+    flex: 1;
+}
+.kanban__column:not(:last-child) {
+    margin-right: 30px;
+}
+.kanban__column-title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: white;
+    user-select: none;
+}

@@ -110,3 +110,10 @@ p.subtitle {
     color: var(--textsub);
     font-size: 0.95rem;
 }
+footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--textsub);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}

@@ -8,6 +8,7 @@ export default class KanbanAPI {
 
     return column.items;
    };
+   static insertItem
 };
 
 function read() {
@@ -33,4 +34,4 @@ function read() {
 };
 function save(data){
     localStorage.setItem("kanban-data", JSON.stringify(data));
-}
+};

@@ -1,3 +1,4 @@
+import KanbanAPI from "./KanbanAPI.js";
 export default class column {
     constructor(id, title){
         this.elements = {};
@@ -9,7 +10,14 @@ export default class column {
         this.elements.additem.textContent = "+ Add";
         this.elements.root.dataset.id = id;
         this.elements.title.textContent = title;
-    }
+
+        this.elements.additem.addEventListener("click", () => {
+
+        });
+        KanbanAPI.getItem(id).forEach(item => {
+            console.log(item);
+        })
+    };
     static createroot() {
         const range = document.createRange();
         range.selectNode(document.body);

@@ -1,3 +1,5 @@
 import KanbanAPI from "./KanbanAPI.js";
 
-console.log(KanbanAPI.insertItem(2, "hot tea"));
+KanbanAPI.updateItem(35422, {
+    columnId: 1
+});

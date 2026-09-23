@@ -25,3 +25,18 @@
     color: white;
     user-select: none;
 }
+.kanban__item-input {
+    padding: 10px 15px;
+    background: rgb(212, 153, 115);
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;    
+}
+.kanban__dropzone {
+    height: 10px;
+    transition: background 0.15s, height 0.15s;
+}
+.kanban__dropzone--active {
+    height: 20px;
+    background-color: rgb(34, 31, 31);
+}

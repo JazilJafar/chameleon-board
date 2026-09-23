@@ -1,7 +1,10 @@
 export default class kanban {
     constructor(root){
       this.root = root;
-    }
+      kanban.columns().forEach(column => {
+
+      })
+    };
     static columns() {
         return [
             {

@@ -3,6 +3,10 @@ export default class item {
       this.elements = {};
       this.elements.root = item.createroot();
       this.elements.input = this.elements.root.querySelector(".kanban__item-input");
+
+      this.elements.root.dataset.id = id;
+      this.elements.input = content;
+      this.content = content;
     }
     static createroot(){
        const range = document.createRange();

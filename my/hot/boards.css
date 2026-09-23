@@ -40,3 +40,13 @@
     height: 20px;
     background-color: rgb(34, 31, 31);
 }
+.kanban__add-item {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(49, 48, 48, 0.5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

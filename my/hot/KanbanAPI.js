@@ -43,8 +43,14 @@ export default class KanbanAPI {
         && newProps.position !== undefined
       ){
         const targetColumn = data.find(column => column.id == newProps.columnId);
-        console.log(targetColumn);
+        if(!targetColumn) {
+            throw new Error("Target column not found.");
+        }
+        currentColumn.items.splice(currentColumn.items.indexOf(item), 1);
+
+        targetColumn.items.splice(newProps.position, 0, item);
     };
+    save(data);
     };
 };
 

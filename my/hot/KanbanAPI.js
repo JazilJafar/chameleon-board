@@ -56,7 +56,12 @@ export default class KanbanAPI {
        const data = read();
        for (const column of data) {
           const item = column.items.find(item => item.id == itemId);
+
+          if(!item) {
+            column.items.splice(column.items.indexOf(item), 1);
+          };
        };
+       save(data);
     };
 };
 

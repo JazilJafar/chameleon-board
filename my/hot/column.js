@@ -30,6 +30,6 @@ export default class column {
             `).children[0];
     };
     renderitem(data){
-
+      
     }
 };

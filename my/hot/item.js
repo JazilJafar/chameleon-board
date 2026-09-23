@@ -2,6 +2,7 @@ export default class item {
     constructor(id, content) {
       this.elements = {};
       this.elements.root = item.createroot();
+      this.elements.input = this.elements.root.querySelector(".kanban__item-input");
     }
     static createroot(){
        const range = document.createRange();
@@ -12,4 +13,4 @@ export default class item {
          </div>
         `).children[0];
     }
-}
+};

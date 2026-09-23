@@ -52,6 +52,12 @@ export default class KanbanAPI {
     };
     save(data);
     };
+    static deleteitem(itemId) {
+       const data = read();
+       for (const column of data) {
+          const item = column.items.find(item => item.id == itemId);
+       };
+    };
 };
 
 function read() {

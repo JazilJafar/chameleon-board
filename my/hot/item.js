@@ -7,7 +7,12 @@ export default class item {
       this.elements.root.dataset.id = id;
       this.elements.input = content;
       this.content = content;
-    }
+      
+      const onedit = () => {
+        const newcontent = this.elements.input.textContent.trim();
+      };
+      this.elements.input.add
+    };
     static createroot(){
        const range = document.createRange();
        range.selectNode(document.body);

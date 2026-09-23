@@ -11,7 +11,6 @@ export default class column {
         this.elements.additem.textContent = "+ Add";
         this.elements.root.dataset.id = id;
         this.elements.title.textContent = title;
-
         this.elements.additem.addEventListener("click", () => {
           const newitem = KanbanAPI.insertItem(id, "");
           this.renderitem(newitem);

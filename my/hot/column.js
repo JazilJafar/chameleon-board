@@ -1,4 +1,3 @@
-import Dropzone from "dropzone";
 import Item from "./item.js";
 import KanbanAPI from "./KanbanAPI.js";
 import dropzone from "./dropzone.js";

@@ -19,7 +19,10 @@ export default class dropzone {
 
             const columnelement = dropzone.closest(".kanban__column");
             const columnid = Number(columnelement.dataset.id);
-            console.log(columnelement, columnid);
+            const dropincol = Array.from(columnelement.querySelectorAll(".kanban__dropzon"));
+            const dropindex = dropincol.indexOf(dropincol);
+            const itemId = Number(e.dataTransfer.getData("text/plain"));
+            const droppitemelement = document.querySelector(`[data-id="${itemId}"]`);
         });
         return dropzone;
     };

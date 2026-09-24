@@ -2,6 +2,7 @@ import KanbanAPI from "./KanbanAPI.js";
 import dropzone from "./dropzone.js";
 export default class item {
     constructor(id, content) {
+      const bottomdropzone = dropzone.createdropzone();
       this.elements = {};
       this.elements.root = item.createroot();
       this.elements.input = this.elements.root.querySelector(".kanban__item-input");
@@ -9,7 +10,7 @@ export default class item {
       this.elements.root.dataset.id = id;
       this.elements.input.textContent = content;
       this.content = content;
-      
+      this.elements.root.appendChild("bottomdropzone");
       const onedit = () => {
         const newcontent = this.elements.input.textContent.trim();
         if(newcontent == this.content){
@@ -29,7 +30,7 @@ export default class item {
           this.elements.root.parentElement.removeChild(this.elements.root);
          };
       });
-      this.elements.root.addEventListener("drgsrt", e => {
+      this.elements.root.addEventListener("dragstart", e => {
         e.dataTransfer.setData("text/plain", id);
       });
       this.elements.input.addEventListener("drop", e => {

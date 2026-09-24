@@ -7,7 +7,7 @@
     display: flex;
     padding: 30px;
     width: 750px;
-    background-color: orange;
+    background-image: linear-gradient(black,white,orange);
     border-radius: 5px;
 } 
 .kanban * {
@@ -49,4 +49,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+body {
+    background-image: linear-gradient(134deg, rgb(230, 164, 40),rgb(179, 165, 127),rgb(199, 123, 41),rgb(186, 135, 47));
 }

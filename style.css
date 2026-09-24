@@ -204,3 +204,6 @@ nav ul li a {
     padding: 6px;
     font-size: 14px;
 }
+body {
+    background-image: linear-gradient(134deg, rgb(230, 164, 40),white,orange,yellow);
+}

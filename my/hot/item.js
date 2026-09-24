@@ -10,7 +10,7 @@ export default class item {
       this.elements.root.dataset.id = id;
       this.elements.input.textContent = content;
       this.content = content;
-      this.elements.root.appendChild("bottomdropzone");
+      this.elements.root.appendChild(bottomdropzone);
       const onedit = () => {
         const newcontent = this.elements.input.textContent.trim();
         if(newcontent == this.content){

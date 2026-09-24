@@ -1,3 +1,4 @@
+import KanbanAPI from "./KanbanAPI.js";
 export default class dropzone {
     static createdropzone(){
         const range = document.createRange();
@@ -6,7 +7,7 @@ export default class dropzone {
              <div class="kanban__dropzone"></div>
             `).children[0];
 
-        dropzone.addEventListener("dargover", e => {
+        dropzone.addEventListener("dragover", e => {
             e.preventDefault();
             dropzone.classList.add("kanban__dropzone--active");
         });
@@ -19,10 +20,17 @@ export default class dropzone {
 
             const columnelement = dropzone.closest(".kanban__column");
             const columnid = Number(columnelement.dataset.id);
-            const dropincol = Array.from(columnelement.querySelectorAll(".kanban__dropzon"));
-            const dropindex = dropincol.indexOf(dropincol);
+            const dropincol = Array.from(columnelement.querySelectorAll(".kanban__dropzone"));
+            const dropindex = dropincol.indexOf(dropzone);
             const itemId = Number(e.dataTransfer.getData("text/plain"));
             const droppitemelement = document.querySelector(`[data-id="${itemId}"]`);
+            const insertafter = dropzone.parentElement.classList.contains("kanban__item") ? dropzone.parentElement : dropzone;
+            insertafter.after(droppitemelement);
+            console.log(insertafter);
+            KanbanAPI.updateItem(itemId, {
+    columnId: columnid,
+    position: dropindex
+});
         });
         return dropzone;
     };

@@ -1,4 +1,5 @@
 import KanbanAPI from "./KanbanAPI.js";
+import dropzone from "./dropzone.js";
 export default class item {
     constructor(id, content) {
       this.elements = {};
@@ -27,6 +28,12 @@ export default class item {
           this.elements.input.removeEventListener("blur", onedit);
           this.elements.root.parentElement.removeChild(this.elements.root);
          };
+      });
+      this.elements.root.addEventListener("drgsrt", e => {
+        e.dataTransfer.setData("text/plain", id);
+      });
+      this.elements.input.addEventListener("drop", e => {
+        e.preventDefault();
       });
     };
     static createroot(){

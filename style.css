@@ -138,3 +138,91 @@ body {
 .hero-btns a:active {
     transform: scale(0.97);
 }
+
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.about h1 {
+    font-size: 3.5em;
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.about-content {
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.about h2 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-size: 1.8rem;
+}
+
+/* theme swatch */
+.theme-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.theme-card {
+    padding: 24px 12px;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+}
+
+.theme-card.harvest {
+    background: #b5651d;
+}
+
+.theme-card.cold {
+    background: #2a6f97;
+}
+
+.theme-card.hot {
+    background: #c0392b;
+}
+
+.theme-card.treasure {
+    background: #b8860b;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.features-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 20px;
+    text-align: left;
+}
+
+.feature-num {
+    display: block;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+    background: #152a64;
+}
+
+.features-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+@media (max-width: 600px) {
+    .theme-grid .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

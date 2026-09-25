@@ -1,5 +1,5 @@
 :root{
-    --bg: #f5f7f5;
+    --bg: #f5ef9e;
     --surface: #ffffff;
     --text: #202923;
     --muted: #68756d;
@@ -17,7 +17,8 @@ html {
     margin: 0;
 }
 body {
-    background-color: var(--bg);
+    padding-top: 90px;
+    background: var(--bg);
     color: var(--text);
     font-family: "DM Sans", sans-serif;
     line-height: 1.7;
@@ -30,9 +31,26 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #81c0ef;
+    background: #152a64;
     font-size: 1.3rem;
-    padding: 0 20px;
+    padding: 0 24px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+.logo {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    padding: 15px 0;
 }
 
 .nav-links {
@@ -41,23 +59,82 @@ body {
     padding: 0;
     display: flex;
     gap: 15px;
+    align-items: center;
 }
 
 .nav-links a {
-    display: block;
+    display: inline-block;
+    position: relative;
     color: white;
     text-decoration: none;
-    padding: 15px 20px;
+    padding: 12px 18px;
     font-family: "DM Sans", sans-serif;
+    border-radius: 6px;
     transition: background-color 0.3s ease;
 }
 
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #ffcc00;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
 .nav-links a:hover {
-    background: #81c0ef;
     color: #ffcc00;
 }
-.header h5 {
+
+.nav-links a:hover::after {
+    width: 60%;
+    left: 20%;
+}
+
+.hero {
     display: flex;
-    background: #81c0ef;
-    font-size: 1.3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    height: 50vh;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 5em;
+    padding: 50px;
+}
+
+.hero p {
+    font-size: 1.8rem;
+}
+
+.hero-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 10px 20px;
+}
+
+.hero-btns a {
+    text-decoration: none;
+    padding: 12px 24px;
+    color: #fcfdfd;
+    background: #152a64;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 3px #152a64;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.hero-btns a:hover {
+    transform: scale(1.08);
+}
+
+.hero-btns a:active {
+    transform: scale(0.97);
 }

@@ -101,3 +101,229 @@ a {
     letter-spacing: -0.07em;
     line-height: 1.07;
 }
+
+.board-description {
+    margin: 16px 0 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.add-button,
+.save-button {
+    border: 1px solid var(--gold);
+    background: var(--gold);
+    color: #172021;
+    font-weight: 700;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.add-button {
+    flex-shrink: 0;
+    padding: 12px 18px;
+}
+
+.add-button span {
+    margin-right: 4px;
+    font-size: 1.25rem;
+    line-height: 0;
+    vertical-align: -1px;
+}
+
+.add-button:hover,
+.save-button:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+.board-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-size: 0.87rem;
+}
+
+.board-toolbar p {
+    margin: 0;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 18px;
+    padding-bottom: 80px;
+}
+
+.column{
+    min-width: 0;
+    min-height: 420px;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--panel);
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.column.drag-over {
+    border-color: var(--gold);
+    background: var(--panel-light);
+}
+
+.column-heading,
+.column-title {
+    display: flex;
+    align-items: center;
+}
+
+.column-heading {
+    justify-content: space-between;
+    gap: 10px;
+    margin: 2px 2px 17px;
+}
+
+.column-title {
+    gap: 10px;
+}
+
+.column-title h2 {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.column-dot {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.todo-dot {
+    background: var(--gold);
+}
+
+.progress-dot {
+    background: var(--blue);
+}
+
+.done-dot {
+    background: var(--green);
+}
+
+.task-count {
+    display: grid;
+    place-items: center;
+    min-width: 27px;
+    height: 27px;
+    padding: 0 6px;
+    border-radius: 8px;
+    background: var(--panel-light);
+    color: var(--muted);
+    font-size: 0.87rem;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    max-width: 340px;
+}
+
+.task-card {
+    padding: 17px;
+    border: 1px solid #415053;
+    background: var(--card);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.task-card:hover {
+    border-color: rgba(232, 189, 104, 0.65);
+    transform: translateY(-2px);
+}
+
+.task-card.dragging {
+    opacity: 0.45;
+    cursor: grabbing;
+}
+
+.task-card h3 {
+    overflow-wrap: anywhere;
+    margin: 0 0 7px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.task-card p {
+    overflow-wrap: anywhere;
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.card-actions button {
+    padding: 4px 0;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.card-actions button:hover {
+    color: var(--gold-light);
+}
+
+.card-actions .delete-task:hover {
+    color: #f0a39d;
+}
+
+.card-actions button + button {
+    margin-left: 12px;
+}
+
+.empty-state {
+    padding: 28px 12px;
+    border: 1px dashed var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.task-dialog {
+    width: min(100% - 32px, 500px);
+    max-height: min(90vh, 700px);
+    padding: 28px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--text);
+    box-shadow: var(--shadow);
+}
+
+.task-dialog::backdrop {
+    background: rgba(4, 10, 11, 0.75);
+    backdrop-filter: blur(5px);
+}
+
+.dialog-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+

@@ -259,6 +259,34 @@ body {
     line-height: 1.55;
 }
 
+.theme-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+    padding: 10px 14px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.theme-button:hover {
+    background: rgba(255, 255, 255, 0.28);
+    transform: scale(1.03);
+}
+
+.theme-button:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
 .harvest {
     background: linear-gradient(145deg, #b8682d, #713e29);
 }

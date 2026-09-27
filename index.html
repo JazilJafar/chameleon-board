@@ -15,62 +15,151 @@
 </head>
 <body>
     <section class="header">
-        <h5>
-            Chameleon-Board
-        </h5>
-        <nav>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="https://github.com/JazilJafar/chameleon-board">Github</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+        <nav class="navbar">
+            <div class="logo">Chameleon</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="https://github.com/JazilJafar/chameleon-board">Github</a></li>
+                <li><a href="#how-to-use">How to Use</a></li>
+            </ul>
+        </nav>
     </section>
-    <div id="about" style="height: 110vh;">
-        <h1>Chameleon-Board</h1>
-        <p>Adaptive Kanban boards designed to fit any workflow.</p>
-        <p>Just like its name, Chameleon-Board shifts layout,theme and features to match your hobbies.</p>
+    <section class="hero">
+        <h1>Welcome to Chameleon Board</h1>
+        <p>Your adaptive Kanban workspace for study, projects and ideas</p>
+        <div class="hero-btns">
+            <a href="#about" class="primary-btn">Explore</a>
+            <a href="#how-to-use" class="secondary-btn">See how to use</a>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <h1>About</h1>
+        <div class="about-content">
+            <p>Chameleon Board is a flexible and adaptive Kanban board designed to help you organise your work and ideas effectively.</p>
+            <h2>It has the following themes:</h2>
+            <div class="theme-grid">
+                <article class="theme-card harvest">
+                    <div class="theme-top">
+                        <span class="theme-tag">01</span>
+                    </div>
+                    <h3>Harvest</h3>
+                    <p>Warm colours for calm planning and steady progress</p>
+                    <div class="palette">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a class="theme-button" href="./my/harvest/index.html">Open harvest board</a>
+                </article>
 
-        <ul class="abhi">
-            <li><strong>Adaptive Layouts:</strong>You can easily switch to other designs if wanted</li>
-            <li><strong>Custom themes:</strong>Match your hobbies with themes</li>
-            <li><strong>Scalable Workflows:</strong>This can store every data and also it is in your local storage for safety</li>
-        </ul>
-        <div class="themes">
-            <div style="background-color: rgb(158, 213, 248); border-radius: 30px;padding: 10px;"> 
-                <h3>Cold themed website</h3>
-                <a href="./my/cold/land.html">Cold website</a>
+                <article class="theme-card cold">
+                    <div class="theme-top">
+                        <span class="theme-tag">02</span>
+                    </div>
+                    <h3>Cold</h3>
+                    <p>Cold blue shades for a focused, clean, and peacefull workspace</p>
+                    <div class="palette">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a class="theme-button" href="./my/cold/index.html">Open cold board</a>
+                </article>
+
+                <article class="theme-card hot">
+                    <div class="theme-top">
+                        <span class="theme-tag">03</span>
+                    </div>
+                    <h3>Hot</h3>
+                    <p>Bright energetic colors to help you stay motivated and active</p>
+                    <div class="palette">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a class="theme-button" href="./my/hot/index.html">Open hot board</a>
+                </article>
+
+                <article class="theme-card treasure">
+                    <div class="theme-top">
+                        <span class="theme-tag">04</span>
+                    </div>
+                    <h3>Treasure</h3>
+                    <p>Golden tones for a creative board full of ideas and discoveries</p>
+                    <div class="palette">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a class="theme-button" href="./my/treasure/index.html">Open treasure board</a>
+                </article>  
             </div>
-            <div style="background-color: greenyellow; border-radius: 30px;margin-top: 20px;padding: 10px;">
-                <h3>Harvest themed website</h3>
-                <a href="./my/harvest/index.html">harvest website</a>
+
+            <div class="content-heading features-heading">
+                <h2>Features:</h2>
             </div>
-            <div style="background-color: rgb(210, 146, 109); border-radius: 30px;margin-top: 20px;padding: 10px;">
-                <h3>Hot themed website</h3>
-                <a href="./my/hot/index.html">Hot themed Website</a>
+            <div class="features-grid">
+                <article class="features-card">
+                    <div class="features-num">01</div>
+                    <div>
+                        <h3>Drag and drop functionality</h3>
+                        <p>Move tasks between columns quickly as your work</p>
+                    </div>
+                </article>
+                <article class="features-card">
+                    <div class="features-num">02</div>
+                    <div>
+                        <h3>Custom themes</h3>
+                        <p>Personalise your board with a theme that matches your mood</p>
+                    </div>
+                </article>
+                <article class="features-card">
+                    <div class="features-num">03</div>
+                    <div>
+                        <h3>Responsive design</h3>
+                        <p>Use your workspace comfortably on phones, tablets and laptops</p>
+                    </div>
+                </article>
+                <article class="features-card">
+                    <div class="features-num">04</div>
+                    <div>
+                        <h3>Simple interface</h3>
+                        <p>Keep your tasks cleaner and accessible without and unnecessary clutter</p>
+                    </div>
+                </article>
             </div>
         </div>
-    </div>
-    <div class="contact-section" id="contact">
-        <h2>Get in Touch</h2>
-        <p>Have questions? Connect with us below.</p>
-        <div class="contact-links">
-            <a href="mailto:jazilhani@gmail.com" class="contact-card">
-                <span class="icon">✉️</span>
-                <div class="text">
-                    <strong>E-mail Us</strong>
-                    <small>jazilhani@gmail.com</small>
-                </div>
-            </a>
-            <a href="https://github.com/JazilJafar/chameleon-board" target="_blank" class="contact-card">
-                <span class="icon">💻</span>
-                <div class="text">
-                    <strong>Github</strong>
-                    <small>Contribute to this small Project</small>
-                </div>
-            </a>
+    </section>
+    <section class="how-to-use" id="how-to-use">
+        <h1>How to use</h1>
+        <p class="how-intro">Get started with your board with just a few simple steps</p>
+
+        <div class="steps-grid">
+            <article class="step-card">
+                <span class="step-number">01</span>
+                <h2>Choose a theme</h2>
+                <p>Pick a theme to make the workspace feel like yours.</p>
+            </article>
+
+            <article class="step-card">
+                <span class="step-number">02</span>
+                <h2>Add your tasks</h2>
+                <p>Create cards for your study goals, projects, or ideas so everything stays in one place.</p>
+            </article>
+
+            <article class="step-card">
+                <span class="step-number">03</span>
+                <h2>Move things along</h2>
+                <p>Drag cards between columns as you start working on them and finish them.</p>
+            </article>
+
+            <article class="step-card">
+                <span class="step-number">04</span>
+                <h2>Keep your board fresh</h2>
+                <p>Update your tasks as plans change and use your board to see what needs attention next.</p>
+            </article>
         </div>
-    </header>
+    </section>
     <script src="./script.js"></script>
 </body>
 </html>

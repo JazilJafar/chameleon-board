@@ -146,7 +146,7 @@ document.querySelector("#open-task-modal").addEventListener("click", () => {
     openTaskDialog();
 });
 
-document.querySelector("close-task-modal").addEventListener("click", () => {
+document.querySelector("#close-task-modal").addEventListener("click", () => {
     dialog.close();
 });
 
@@ -162,4 +162,87 @@ dialog.addEventListener("click", (event) => {
 
 dialog.addEventListener("close", () => {
     editingTaskId = null;
-})
+});
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const title = titleInput.value.trim();
+    const description = descriptionInput.value.trim();
+    const status = statusInput.value;
+
+    if(!title || !statuses.includes(status)) return;
+
+    if (editingTaskId) {
+        const task = tasks.find((item) => item.id === editingTaskId);
+        if (!task) return;
+
+        task.title = title;
+        task.description = description;
+        task.status = status;
+    } else {
+        tasks.push({
+            id: crypto.randomUUID(),
+            title,
+            description,
+            status
+        });
+    }
+    
+    saveTasks();
+    renderTasks();
+    dialog.close();
+});
+
+document.querySelector(".board").addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-action]");
+    if (!button) return;
+
+    const task = tasks.find((item) => item.id === button.dataset.id);
+    if (!task) return;
+
+    if (button.dataset.action === "edit") {
+        openTaskDialog(task);
+    }
+
+    if (button.dataset.action === "delete") {
+        const shouldDelete = confirm(`Delete "${task.title}" ?`);
+        if(!shouldDelete) return;
+
+        tasks = tasks.filter((item) => item.id !== task.id);
+        saveTasks();
+        renderTasks();
+    }
+});
+
+document.querySelectorAll(".column").forEach((column) => {
+    column.addEventListener("dragover", (event) => {
+        if (!draggedTaskId) return;
+
+        event.preventDefault();
+        event.dataTransfer.dropEffect = "move";
+        column.classList.add("drag-over");
+    });
+
+    column.addEventListener("dragleave", (event) => {
+        if (!column.contains(event.relatedTarget)) {
+            column.classList.remove("drag-over");
+        }
+    });
+
+    column.addEventListener("drop", (event) => {
+        event.preventDefault();
+        column.classList.remove("drag-over");
+
+        const taskId = event.dataTransfer.getData("text/plain") || draggedTaskId;
+        const task = tasks.find((item) => item.id === taskId);
+
+        if (!task) return;
+
+        task.status = column.dataset.status;
+        saveTasks();
+        renderTasks();
+    });
+});
+
+renderTasks();

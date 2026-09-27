@@ -6,6 +6,7 @@
     <meta name="description" content="Treasure themed kanban board for Chameleon board">
     <title>Treasure Kanban Board</title>
 
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -19,32 +20,41 @@
                 <span>Chameleon Board</span>
             </a>
 
+
             <a class="back-link" href="../../index.html">
                 Back to themes
             </a>
         </header>
 
+
         <main>
             <section class="board-heading">
                 <div>
                     <h1 id="board-title">Treasure board</h1>
+                    
+                    <img
+                        class="compass-art"
+                        src="../../assets/Compass.webp"
+                        alt=""
+                        aria-hidden="true"
+                    >
                 </div>
-
                 <button class="add-button" id="open-task-modal" type="button">
                     <span aria-hidden="true">+</span>New task
                 </button>
             </section>
+
 
             <div class="board-toolbar">
                 <p id="task-summary">0 tasks on your board</p>
                 <p class="toolbar-note">Drag cards to move them between columns</p>
             </div>
 
+
             <section class="board" aria-label="Kanban board">
                 <div class="column" data-status="todo">
                     <header class="column-heading">
                         <div class="column-title">
-                            <span class="column-dot todo-dot" aria-hidden="true"></span>
                             <h2>To Do</h2>
                         </div>
                         <span class="task-count" id="todo-count">0</span>
@@ -52,10 +62,10 @@
                     <div class="task-list" id="todo-list"></div>
                 </div>
 
+
                 <div class="column" data-status="progress">
                     <header class="column-heading">
                         <div class="column-title">
-                            <span class="column-dot todo-dot" aria-hidden="true"></span>
                             <h2>In Progress</h2>
                         </div>
                         <span class="task-count" id="progress-count">0</span>
@@ -63,10 +73,10 @@
                     <div class="task-list" id="progress-list"></div>
                 </div>
 
+
                 <div class="column" data-status="done">
                     <header class="column-heading">
                         <div class="column-title">
-                            <span class="column-dot todo-dot" aria-hidden="true"></span>
                             <h2>Done</h2>
                         </div>
                         <span class="task-count" id="done-count"></span>
@@ -74,15 +84,24 @@
                     <div class="task-list" id="done-list"></div>
                 </div>
             </section>
+
+            <img
+                class="chest-art"
+                src="../../assets/Treasure_chest.webp"
+                alt=""
+                aria-hidden="true"
+            >
         </main>
     </div>
 
-    <dialog class="task-dialog" id="task-dialog" aria-labelled-by="dialog-title">
+
+    <dialog class="task-dialog" id="task-dialog" aria-labelledby="dialog-title">
         <form id="task-form">
             <div class="dialog-heading">
                 <div>
                     <h2 id="dialog-title">Add a task</h2>
                 </div>
+
 
                 <button
                     class="icon-button"
@@ -94,6 +113,7 @@
                 </button>
             </div>
 
+
             <label for="task-title">Task name</label>
             <input
                 id="task-title"
@@ -104,6 +124,7 @@
                 required
             >
 
+
             <label for="task-description">Description <span>(optional)</span></label>
             <textarea
                 id="task-description"
@@ -113,12 +134,14 @@
                 placeholder="Add a little more detail..."
             ></textarea>
 
+
             <label for="task-status">Column</label>
             <select id="task-status" name="status">
-                <option value="todo">To do</option>
-                <option value="progress">In progress</option>
-                <option value="done">Done</option>
+                <option value="todo">Uncharted</option>
+                <option value="progress">On the trail</option>
+                <option value="done">Found</option>
             </select>
+
 
             <div class="dialog-actions">
                 <button class="cancel-button" id="cancel-task" type="button">

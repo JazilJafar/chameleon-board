@@ -1,55 +1,80 @@
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/apfel-grotezk@5.3.0/index.css');
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap');
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.aoboshi-one-regular {
+  font-family: "Aoboshi One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+    background-color: #0d0c11;
+    color: #f5f5f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
 }
 .kanban {
     display: flex;
-    padding: 30px;
-    width: 750px;
-    background-image: linear-gradient(black,white,orange);
-    border-radius: 5px;
-} 
-.kanban * {
-    font-family: sans-serif, Arial, Helvetica, system-ui, -apple-system, BlinkMacSystemFont;
+    gap: 24px;
+    width: 100%;
+    max-width: 1100px;
+    align-items: flex-start;
+}
+h1 {
+  font-family: 'Apfel Grotezk', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2.2rem;
+  margin-bottom: 32px;
+  background-image: linear-gradient(135deg, #ff3b00, #ff8800);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  letter-spacing: -0.5px;
 }
 .kanban__column {
     flex: 1;
-}
-.kanban__column:not(:last-child) {
-    margin-right: 30px;
+    background: #15131d;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 .kanban__column-title {
-    margin-bottom: 20px;
-    font-size: 30px;
-    color: white;
-    user-select: none;
+  font-family: "Aoboshi One";
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #f5f5f7;
+  user-select: none;
+}
+.kanban__column-items {
+    min-height: 20px;
+}
+.kanban__item {
+    margin-bottom: 4px;
+    cursor: grab;
+}
+.kanban__item:active{
+    cursor: grabbing;
 }
 .kanban__item-input {
-    padding: 10px 15px;
-    background: rgb(212, 153, 115);
-    box-sizing: border-box;
-    border-radius: 5px;
-    cursor: pointer;    
-}
-.kanban__dropzone {
-    height: 10px;
-    transition: background 0.15s, height 0.15s;
-}
-.kanban__dropzone--active {
-    height: 20px;
-    background-color: rgb(34, 31, 31);
-}
-.kanban__add-item {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: rgb(228, 223, 223);
-    background-color: rgba(49, 48, 48, 0.5);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-body {
-    background-image: linear-gradient(134deg, rgb(230, 164, 40),rgb(179, 165, 127),rgb(199, 123, 41),rgb(186, 135, 47));
+    padding: 12px 16px;
+    background: #1e1b29;
+    border: 1px solid rgba(255, 85, 0, 0.15);
+    border-radius: 10px;
+    color: #f5f5f7;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    outline: none;
+    transition: all 0.2s ease;
 }

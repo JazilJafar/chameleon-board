@@ -1,0 +1,124 @@
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/apfel-grotezk@5.3.0/index.css');
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.aoboshi-one-regular {
+  font-family: "Aoboshi One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+    background-color: #0d0c11;
+    color: #f5f5f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+.kanban {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    max-width: 1100px;
+    align-items: flex-start;
+}
+h1 {
+  font-family: 'Apfel Grotezk', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2.2rem;
+  margin-bottom: 32px;
+  background: red;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+.kanban__column {
+    flex: 1;
+    background: #15131d;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.kanban__column-title {
+  font-family: "Aoboshi One";
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #f5f5f7;
+  user-select: none;
+}
+.kanban__column-items {
+    min-height: 20px;
+}
+.kanban__item {
+    margin-bottom: 4px;
+    cursor: grab;
+}
+.kanban__item:active{
+    cursor: grabbing;
+}
+.kanban__item-input {
+    padding: 12px 16px;
+    background: #1e1b29;
+    border-radius: 10px;
+    color: #f5f5f7;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    outline: none;
+    transition: all 0.2s ease;
+}
+.kanban__item-input:hover {
+    background: #262235;
+}
+.kanban__item-input:focus {
+    background-color: black;
+}
+.kanban__dropzone {
+    height: 8px;
+    margin: 2px 0;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+.kanban__dropzone--active {
+    height: 38px;
+    background: rgba(209, 32, 32, 0.497);
+    border-radius: 8px;
+    margin: 8px 0;
+}
+.kanban__add-item {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ff5500;
+    background-color: rgba(221, 104, 25, 0.08);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.kanban__add-item:hover {
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+.board-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+.fire-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 13px;
+    object-fit: contain;
+}

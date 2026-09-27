@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root {
+    --bg-dark: #0d0c11;
+    --card-bg: #181622;
+    --text-main: #f5f5f7;
+    --textsub: #9e9ea7;
+    --glowcolor: rgba(255, 59, 0, 0.4);
+}
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header {
+    padding: 24px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: orange;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height:1.15;
+    margin-bottom: 20px;
+}
+p.subtitle {
+    font-size: 1.2rem;
+    color: var(--textsub);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+.cta-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--glowcolor);
+    color: #ffffff;
+    padding: 16px 42px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+.cta-btn:hover {
+    transform: translateY(-3px);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 60px;
+}
+.card {
+    padding: 24px;
+    text-align: left;
+}
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #d73030;
+}
+.card p {
+    color: var(--textsub);
+    font-size: 0.95rem;
+}
+footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--textsub);
+    font-size: 0.85rem;
+}

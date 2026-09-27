@@ -13,15 +13,15 @@ export default class kanban {
         return [
             {
                 id: 1,
-                title: "Spark 🧨"
+                title: "Spark"
             },
             {
                 id: 2,
-                title: "On Fire 🔥"
+                title: "On Fire"
             },
             {
                 id: 3,
-                title: "Ash ⚱️"
+                title: "Ash"
             }
         ];
     }

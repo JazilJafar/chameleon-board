@@ -7,7 +7,6 @@
 :root {
     --bg-dark: #0d0c11;
     --card-bg: #181622;
-    --c-f: linear-gradient(135deg, #ff3b00, #ff8800);
     --text-main: #f5f5f7;
     --textsub: #9e9ea7;
     --glowcolor: rgba(255, 59, 0, 0.4);
@@ -29,7 +28,7 @@ header {
 .logo {
     font-size: 1.8rem;
     font-weight: 800;
-    background: var(--c-f);
+    background: orange;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.5px;
@@ -42,28 +41,11 @@ header {
     max-width: 900px;
     margin: 0 auto;
 }
-.badge {
-    background: rgba(255, 59, 0, 0.12);
-    border: 1px solid rgba(255, 59, 0, 0.3);
-    color: #ff6a00;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 24px;
-}
 h1 {
     font-size: 3.5rem;
     font-weight: 800;
     line-height:1.15;
     margin-bottom: 20px;
-}
-h1 span {
-    background: var(--c-f);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 p.subtitle {
     font-size: 1.2rem;
@@ -80,12 +62,10 @@ p.subtitle {
     font-size: 1.15rem;
     font-weight: 700;
     border-radius: 12px;
-    box-shadow: 0 10px 25px var(--glowcolor);
     transition: all 0.3s ease;
 }
 .cta-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(255, 59, 0, 0.6);
 }
 .grid {
     display: grid;
@@ -95,16 +75,13 @@ p.subtitle {
     margin-top: 60px;
 }
 .card {
-    background: var(--card-bg);
-    border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 24px;
-    border-radius: 14px;
     text-align: left;
 }
 .card h3 {
     font-size: 1.1rem;
     margin-bottom: 8px;
-    color: #ffffff;
+    color: #d73030;
 }
 .card p {
     color: var(--textsub);
@@ -115,5 +92,4 @@ footer {
     padding: 24px;
     color: var(--textsub);
     font-size: 0.85rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }

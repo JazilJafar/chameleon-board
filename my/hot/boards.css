@@ -33,7 +33,7 @@ h1 {
   font-style: normal;
   font-size: 2.2rem;
   margin-bottom: 32px;
-  background-image: linear-gradient(135deg, #ff3b00, #ff8800);
+  background: red;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -42,12 +42,10 @@ h1 {
 .kanban__column {
     flex: 1;
     background: #15131d;
-    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 14px;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 .kanban__column-title {
   font-family: "Aoboshi One";
@@ -70,7 +68,6 @@ h1 {
 .kanban__item-input {
     padding: 12px 16px;
     background: #1e1b29;
-    border: 1px solid rgba(255, 85, 0, 0.15);
     border-radius: 10px;
     color: #f5f5f7;
     font-size: 0.95rem;
@@ -80,12 +77,9 @@ h1 {
 }
 .kanban__item-input:hover {
     background: #262235;
-    border-color: rgba(255, 85, 0, 0.35);
 }
 .kanban__item-input:focus {
-    background: #262235;
-    border-color: #ff5500;
-    box-shadow: 0 0 12px rgba(255, 59, 0, 0.35);
+    background-color: black;
 }
 .kanban__dropzone {
     height: 8px;
@@ -95,8 +89,7 @@ h1 {
 }
 .kanban__dropzone--active {
     height: 38px;
-    background: rgba(255, 85, 0, 0.12);
-    border: 2px dashed #ff5500;
+    background: rgba(209, 32, 32, 0.497);
     border-radius: 8px;
     margin: 8px 0;
 }
@@ -107,16 +100,13 @@ h1 {
     font-size: 0.95rem;
     font-weight: 600;
     color: #ff5500;
-    background-color: rgba(255, 59, 0, 0.08);
-    border: 1px solid rgba(255, 59, 0, 0.2);
+    background-color: rgba(221, 104, 25, 0.08);
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 .kanban__add-item:hover {
-    background: #ff5500;
     color: #ffffff;
-    box-shadow: 0 6px 20px rgba(255, 59, 0, 0.35);
     transform: translateY(-1px);
 }
 .board-header {
@@ -131,5 +121,4 @@ h1 {
     height: 40px;
     margin-bottom: 13px;
     object-fit: contain;
-    filter: drop-shadow(0 0 10px rgba(255, 85, 0, 0.7));
 }

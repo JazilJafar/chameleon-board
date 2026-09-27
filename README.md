@@ -1,59 +1,52 @@
-# Welcome To Our Many Themed Kanban Board website
+# Chameleon Board
 
-![alt text](./assets/name.png)
+Chameleon board is a multi-theme kanban board. It is available in 4 different themes:
+- Cold
+- Hot
+- Harvest
+- Treasure
 
-![alt text](./assets/def.png)
+You can use chameleon board however you want it to be due to it having 4 different themes that match your energy! 
 
-**In this website you can see some themes we made.This time in version 1 there is only 2 themed kanban baord only**
+*Well.. that's great*
 
-![alt text](./assets/themes.png)
+## Tech Stack
+- JavaScript
+- CSS
+- HTML (obv the basic language)
 
-**When you press on that button you go to landing page of a themes like example**
+*and yeah nothing else..*
 
-![alt text](./assets/pll.png)
+## How to use it?
 
-**When you touch that take a look button you will go to kanban board**
+Just go to the website [here](https://jaziljafar.github.io/chameleon-board/) and see more about it!
 
-![alt text](./assets/kni.png)
+In a simple way though, just go there, choose the theme out of the 4, and start organising your work and get the most productive time!
 
-**Where you can edit and move to other progresses and delete easily**
+## Does the work get lost?
 
-# steps to get this in your computer
+Nope, the work doesn't get lost, it uses your localStorage to store your kanban board's data to show it whenever you are back again!
 
-**You can get in your browser by going to this URL: https://chameleon-board.jazil.workers.dev/**
+## Images
 
-**Or running locally use this**
-
-**First in terminal or git bash run this:   git clone https://github.com/JazilJafar/chameleon-board.git**
-
-**and use live server in vc code to use this**
-
+Here's our landing page
 
 
-**If you like this please give a star❤️💖**
+![landing](assets/landing.png)
 
-Contribute to this project
+Here are the theme options!
 
-# license
 
-MIT License
+![themes](assets/themes.png)
 
-Copyright (c) 2026 Jazil Jafar V V
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Here is one of our theme on working (Treasure theme)
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+![add-task](assets/add-task.png)
+![board](assets/treasure.png)
+
+
+---
+
+Please star the repo if you liked this! And you're free to contribute!

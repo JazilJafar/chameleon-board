@@ -327,3 +327,143 @@ a {
     margin-bottom: 25px;
 }
 
+.dialog-heading h2 {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.65rem;
+}
+
+.icon-button {
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--border);
+    background: var(--panel-light);
+    color: var(--text);
+    font-size: 1.45rem;
+    line-height: 1;
+}
+
+.task-dialog label {
+    display: block;
+    margin: 16px 0 7px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.task-dialog label span {
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.task-dialog input,
+.task-dialog textarea,
+.task-dialog select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid var(--border);
+    outline: none;
+    background: #111c1e;
+    color: var(--text);
+}
+
+.task-dialog textarea {
+    resize: vertical;
+}
+
+.task-dialog input:focus,
+.task-dialog textarea:focus,
+.task-dialog select:focus {
+    border-color: var(--gold);
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 26px;
+}
+
+.cancel-button,
+.save-button {
+    padding: 10px 6px;
+    border-radius: 6px;
+}
+
+.cancel-button {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+}
+
+.cancel-button:hover {
+    background: var(--panel-light);
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+    .board {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .app-shell {
+        width: min(100% - 28px, 500px);
+    }
+
+    .topbar {
+        min-height: 72px;
+    }
+
+    .brand {
+        font-size: 0.95rem;
+    }
+
+    .back-link {
+        font-size: 0.8rem;
+    }
+
+    .board-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 44px 0 30px;
+    }
+
+    .board-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .board {
+        grid-template-columns: 1fr;
+    }
+
+    .column {
+        min-height: 210px;
+    }
+
+    .task-list {
+        min-height: 140px
+    }
+
+    .task-dialog {
+        padding: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

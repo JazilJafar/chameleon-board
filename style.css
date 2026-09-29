@@ -286,21 +286,12 @@ body {
     outline: 3px solid #fff;
     outline-offset: 3px;
 }
-
-.harvest {
-    background: linear-gradient(145deg, #b8682d, #713e29);
-}
-
 .cold {
     background: linear-gradient(145deg, #3c83ad, #1f4777);
 }
 
 .hot {
     background: linear-gradient(145deg, #de5542, #992a35);
-}
-
-.treasure {
-    background: linear-gradient(145deg, #d1a12e, #8c5d13);
 }
 
 .palette {
@@ -316,10 +307,6 @@ body {
     height: 7px;
     display: block;
     border-radius: 20px;
-<<<<<<< HEAD
-    padding: 6px;
-    font-size: 14px;
-=======
     background: rgba(255, 255, 255, 0.95);
 }
 
@@ -489,5 +476,4 @@ body {
     .step-card {
         min-height: auto;
     }
->>>>>>> a766457ce76871de704a45bafe1ccfc5942bf896
 }

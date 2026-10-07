@@ -3,8 +3,6 @@
 Chameleon board is a multi-theme kanban board. It is available in 4 different themes:
 - Cold
 - Hot
-- Harvest
-- Treasure
 
 You can use chameleon board however you want it to be due to it having 4 different themes that match your energy! 
 
@@ -21,7 +19,7 @@ You can use chameleon board however you want it to be due to it having 4 differe
 
 Just go to the website [here](https://jaziljafar.github.io/chameleon-board/) and see more about it!
 
-In a simple way though, just go there, choose the theme out of the 4, and start organising your work and get the most productive time!
+In a simple way though, just go there, choose the theme out of the 2, and start organising your work and get the most productive time!
 
 ## Does the work get lost?
 
@@ -40,11 +38,10 @@ Here are the theme options!
 ![themes](assets/themes.png)
 
 
-Here is one of our theme on working (Treasure theme)
+Here is one of our theme on working (Hot theme)
 
 
-![add-task](assets/add-task.png)
-![board](assets/treasure.png)
+![add-task](assets/addme.png)
 
 
 ---
